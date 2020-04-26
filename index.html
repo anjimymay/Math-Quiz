@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge"  />
+    <title>The Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/css/style.css" type = "text/css" media= "screen">
+</head>
+<body>
+    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+
+    <div class="timer">Time: <span id="time">0</span></div>
+
+    <div class="wrapper">
+        <div id="start-screen" class="start">
+            <h1>The Quiz</h1>
+            <p>
+                This quiz is on a timer. Please do your best to complete it before the timer runs out.
+                Keep in mind that wrong answers will penalize you.
+            </p>
+            <button id="start-btn" class = "start-btn btn?">Start the Quiz</button> 
+        </div>
+
+            <div id= "question-container" class= "hide">
+                <div id="question">Question</div>
+                <div id="choices-buttons" class= "btn-grid">
+                    <button class= "btn hover">Answer 1</button>
+                    <button class= "btn hover">Answer 2</button>
+                    <button class= "btn hover">Answer 3</button>
+                    <button class= "btn hover">Answer 4</button>
+                </div>
+            </div>
+
+        <div id="final-screen" class= "hide">
+            <h2>You're finished</h2>
+            <p>Your final score is<span id="final-score"></span>.</p>
+            <p>
+                Enter intials: <input type="text" id="initals" max="3" />
+                <button id="submit">Submit</button>
+            </p>
+        </div>
+    </div>
+
+    <script defer src="./Assets/js/logic.js"></script>
+    <script defer src="./Assets/js/questions.js"></script>
+</body>
+</html>
